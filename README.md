@@ -24,4 +24,4 @@ Code is heavily inspired by [FireKeys](https://github.com/dwmkerr/firekeys).
 * Uppercase
 * URL decode
 * URL encode
-* VSLinq2SQlParamsToTSQL 
+* VSLinq2SqlParamsToTSQL 
