@@ -1,2 +1,9 @@
 # TextTransformer
-TestTransformer is a Windows application that allows you to select text in "any" application, press a shortcut, select a text transformation that is then pasted back to the original application.
+
+TestTransformer in a Windows application that works like this:
+
+1. Select text in any application
+2. Press CTRL+ALT+NUMPAD3
+3. An popup is shown with available transformations
+4. Select a transformation and press enter
+5. The transformed text is pasted back into your original application and replaces your selected text

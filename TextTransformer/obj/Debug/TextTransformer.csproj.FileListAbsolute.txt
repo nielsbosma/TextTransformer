@@ -1,0 +1,17 @@
+c:\users\niels\documents\visual studio 2013\Projects\TextTransformer\TextTransformer\bin\Debug\TextTransformer.exe.config
+c:\users\niels\documents\visual studio 2013\Projects\TextTransformer\TextTransformer\bin\Debug\TextTransformer.exe
+c:\users\niels\documents\visual studio 2013\Projects\TextTransformer\TextTransformer\bin\Debug\TextTransformer.pdb
+c:\users\niels\documents\visual studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\TextTransformer.Properties.Resources.resources
+c:\users\niels\documents\visual studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\TextTransformer.csproj.GenerateResource.Cache
+c:\users\niels\documents\visual studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\TextTransformer.exe
+c:\users\niels\documents\visual studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\TextTransformer.pdb
+C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\TextTransformer_MarkupCompile.cache
+C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\TextTransformer_MarkupCompile.lref
+C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\TextTransformer.g.resources
+C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\UI\UITransformWindow.g.cs
+C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\UI\UITransformWindow.baml
+C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\TextTransformer_Content.g.cs
+C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransformer\bin\Debug\NCalc.dll
+C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\UI\Theme.baml
+C:\Users\Niels\documents\visual studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\TextTransformer.csprojResolveAssemblyReference.cache

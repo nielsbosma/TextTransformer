@@ -1,0 +1,20 @@
+﻿Transformers:
+-------------
+Split (needs params)
+Replace 
+Google Translate (needs settings)
+FriendlyUrl (take from SeoTools)
+
+Core:
+-----
+
+Autocomplete
+https://wpfautocomplete.codeplex.com/SourceControl/latest#WpfControls.Test/MainWindow.xaml
+
+Params (Split)
+Ballon with shortcut notice
+Map certain transformers to a shortcut
+
+
+
+
