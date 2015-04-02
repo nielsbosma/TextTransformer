@@ -15,3 +15,6 @@ C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransfo
 C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransformer\bin\Debug\NCalc.dll
 C:\Users\Niels\Documents\Visual Studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\UI\Theme.baml
 C:\Users\Niels\documents\visual studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\TextTransformer.csprojResolveAssemblyReference.cache
+C:\Users\nielsbosma\Documents\GitHub\TextTransformer\TextTransformer\bin\Debug\TextTransformer.exe.config
+C:\Users\nielsbosma\Documents\GitHub\TextTransformer\TextTransformer\obj\Debug\TextTransformer.exe
+C:\Users\nielsbosma\Documents\GitHub\TextTransformer\TextTransformer\obj\Debug\TextTransformer.pdb

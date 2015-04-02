@@ -4,7 +4,7 @@
 winexe
 C#
 .cs
-C:\Users\Niels\documents\visual studio 2013\Projects\TextTransformer\TextTransformer\obj\Debug\
+C:\Users\nielsbosma\Documents\GitHub\TextTransformer\TextTransformer\obj\Debug\
 TextTransformer
 none
 false
@@ -12,9 +12,9 @@ DEBUG;TRACE
 
 2-336525834
 11536468812
-30-1122089316
-161079809213
+301498894830
+16904716690
 UI\Theme.xaml;UI\UITransformWindow.xaml;
 
-False
+True
 
