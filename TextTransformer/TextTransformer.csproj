@@ -79,6 +79,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Transformers\Parameters\AbstractParameterAttribute.cs" />
+    <Compile Include="Transformers\Parameters\TextParameterAttribute.cs" />
+    <Compile Include="Transformers\ReplaceTransformer.cs" />
     <Compile Include="Transformers\VSLinq2SqlParamsToTSqlConverter.cs" />
     <Compile Include="Transformers\StripTagsTransformer.cs" />
     <Compile Include="Transformers\NormalizeWhitespaceTransformer.cs" />
@@ -94,6 +97,7 @@
     <Compile Include="Transformers\LowercaseTransformer.cs" />
     <Compile Include="Transformers\TransformerCollection.cs" />
     <Compile Include="Transformers\UppercaseTransformer.cs" />
+    <Compile Include="UI\UIParameterContainer.cs" />
     <Compile Include="UI\UITransformWindow.xaml.cs">
       <DependentUpon>UITransformWindow.xaml</DependentUpon>
     </Compile>

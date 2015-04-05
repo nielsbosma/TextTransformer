@@ -28,7 +28,7 @@ namespace TextTransformer.ViewModels
         {
             try
             {
-                ITransformer transformer = Transformers[SelectedTransformer];
+                ITransformer transformer = Transformers[SelectedTransformerIndex];
                 Output = transformer.Transform(Input);
             }
             catch (Exception ex)
@@ -60,17 +60,27 @@ namespace TextTransformer.ViewModels
 
         public TransformerCollection Transformers { get; set; }
 
-        public int SelectedTransformer
+        public int SelectedTransformerIndex
         {
-            get { return _selectedTransformer; }
+            get { return _selectedTransformerIndex; }
             set
             {
-                if (_selectedTransformer != value)
+                if (_selectedTransformerIndex != value)
                 {
-                    _selectedTransformer = value;
+                    _selectedTransformerIndex = value;
+                    RaisePropertyChanged("SelectedTransformerIndex");
                     RaisePropertyChanged("SelectedTransformer");
                     Transform();
                 }
+            }
+        }
+
+        public ITransformer SelectedTransformer
+        {
+            get
+            {
+                if (Transformers == null) return null;
+                return Transformers[SelectedTransformerIndex];    
             }
         }
 
@@ -103,7 +113,7 @@ namespace TextTransformer.ViewModels
 
         private string _input;
         private string _output;
-        private int _selectedTransformer;
+        private int _selectedTransformerIndex;
         private Visibility _visibility = Visibility.Hidden;
     }
 }
