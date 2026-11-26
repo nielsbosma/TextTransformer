@@ -8,19 +8,16 @@ namespace TextTransformer.Transformers
 {
     public class CapitalizeTransformer : ITransformer
     {
-        public string Name
-        {
-            get { return "Capitalize"; }
-        }
+        public string Name => "Capitalize";
 
-        public string Transform(string input)
+        public Task<string> Transform(string input)
         {
             char[] ca = input.ToCharArray();
             for (int i = 0, n = ca.Length; i < n; ++i)
             {
                 ca[i] = (i == 0 || ca[i - 1] == ' ' || ca[i - 1] == '/' || ca[i - 1] == '-') ? char.ToUpper(ca[i]) : char.ToLower(ca[i]);
             }
-            return (new String(ca));
+            return Task.FromResult(new string(ca));
         }
     }
 }

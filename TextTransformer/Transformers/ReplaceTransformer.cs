@@ -22,14 +22,11 @@ namespace TextTransformer.Transformers
         [TextParameter("With")]
         public string ReplaceWith { get; set; }
 
-        public string Name
-        {
-            get { return "Replace"; }
-        }
+        public string Name => "Replace";
 
-        public string Transform(string input)
+        public Task<string> Transform(string input)
         {
-            return input.Replace(ReplaceThis, ReplaceWith);
+            return Task.FromResult(input.Replace(ReplaceThis, ReplaceWith));
         }
 
     }

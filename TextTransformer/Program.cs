@@ -10,7 +10,6 @@ using System.Diagnostics;
 using System.Windows.Forms.VisualStyles;
 using System.Windows.Input;
 using TextTransformer.Core;
-using TextTransformer.Properties;
 using System.Runtime.InteropServices;
 using TextTransformer.Transformers;
 using TextTransformer.UI;
@@ -72,7 +71,7 @@ namespace TextTransformer
         private static void CreateContextMenu()
         {
             _contextMenu = new HotkeyEnabledContextMenuStrip();
-            _contextMenu.Name = Resources.AppName;
+            _contextMenu.Name = "TextTransformer";
             
             var transformItem = new ToolStripMenuItem("&Transform");
             transformItem.Click += transformItem_Click;
@@ -94,15 +93,15 @@ namespace TextTransformer
         {
             _trayIcon = new NotifyIcon();
             _trayIcon.ContextMenuStrip = _contextMenu;
-            _trayIcon.Icon = Resources.Icon;
+            //_trayIcon.Icon = Resources.Icon;
             _trayIcon.Visible = true;
-            _trayIcon.Text = Resources.AppName;
+            _trayIcon.Text = "TextTransformer";
             _trayIcon.MouseDoubleClick += trayIcon_MouseDoubleClick;
         }
 
         static void ShowTipBalloon(string message)
         {
-            _trayIcon.ShowBalloonTip(5000, Properties.Resources.AppName, message, ToolTipIcon.Info);
+            _trayIcon.ShowBalloonTip(5000, "TextTransformer", message, ToolTipIcon.Info);
         }
 
         static void exitItem_Click(object sender, EventArgs e)

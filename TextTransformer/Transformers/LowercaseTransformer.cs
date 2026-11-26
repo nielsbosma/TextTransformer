@@ -8,14 +8,11 @@ namespace TextTransformer.Transformers
 {
     public class LowercaseTransformer : ITransformer
     {
-        public string Name
-        {
-            get { return "Lowercase"; }
-        }
+        public string Name => "Lowercase";
 
-        public string Transform(string input)
+        public Task<string> Transform(string input)
         {
-            return input.ToLower();
+            return Task.FromResult(input.ToLower());
         }
     }
 }

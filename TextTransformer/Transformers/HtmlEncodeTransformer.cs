@@ -9,14 +9,11 @@ namespace TextTransformer.Transformers
 {
     public class HtmlEncodeTransformer : ITransformer
     {
-        public string Name
-        {
-            get { return "HtmlEncode"; }
-        }
+        public string Name => "HtmlEncode";
 
-        public string Transform(string input)
+        public Task<string> Transform(string input)
         {
-            return HttpUtility.HtmlEncode(input);
+            return Task.FromResult(HttpUtility.HtmlEncode(input));
         }
     }
 }

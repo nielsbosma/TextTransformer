@@ -14,7 +14,7 @@ namespace TextTransformer.Transformers
             var result = new TransformerCollection();
 
             var type = typeof(ITransformer);
-
+            
             var instances = AppDomain
                 .CurrentDomain
                 .GetAssemblies()
@@ -23,6 +23,9 @@ namespace TextTransformer.Transformers
                 .Select(t => Activator.CreateInstance(t) as ITransformer);
 
             result.AddRange(instances.OrderBy(e => e.Name));
+            
+            result.Add(new OpenAiTransformer("correct spelling", "correct spelling"));
+            result.Add(new OpenAiTransformer("summarize", "summarize"));
 
             return result;
         }

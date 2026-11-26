@@ -10,19 +10,16 @@ namespace TextTransformer.Transformers
 {
     public class Md5Transformer : ITransformer
     {
-        public string Name
-        {
-            get { return "Md5"; }
-        }
+        public string Name => "Md5";
 
-        public string Transform(string input)
+        public Task<string> Transform(string input)
         {
             byte[] encodedInput = new UTF8Encoding().GetBytes(input);
             byte[] hash = ((HashAlgorithm)CryptoConfig.CreateFromName("MD5")).ComputeHash(encodedInput);
             string encoded = BitConverter.ToString(hash)
                 .Replace("-", string.Empty)
                 .ToLower();
-            return encoded;
+            return Task.FromResult(encoded);
         }
     }
 }

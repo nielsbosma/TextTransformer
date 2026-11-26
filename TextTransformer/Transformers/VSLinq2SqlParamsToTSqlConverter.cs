@@ -10,13 +10,9 @@ namespace TextTransformer.Transformers
 {
     public class VSLinq2SqlParamsToTSqlConverter : ITransformer
     {
-        public string Name
-        {
-            get { return "VSLinq2SqlParamsToTSql"; }
-        }
-
+        public string Name => "VSLinq2SqlParamsToTSql";
         
-        public string Transform(string input)
+        public Task<string> Transform(string input)
         {
             string[] lines = input.Split('\n').Select(e => e.Trim()).Where(e => !string.IsNullOrEmpty(e)).ToArray();
 
@@ -40,7 +36,7 @@ namespace TextTransformer.Transformers
                 }
             }
 
-            return builder.ToString();
+            return Task.FromResult(builder.ToString());
         }
 
         private readonly string[] _textTypes = { "NText", "NVarChar", "VarChar", "UniqueIdentifier", "DateTime" };

@@ -14,9 +14,9 @@ namespace TextTransformer.Transformers
             get { return "UrlEncode"; }
         }
 
-        public string Transform(string input)
+        public Task<string> Transform(string input)
         {
-            return HttpUtility.UrlEncode(input);
+            return Task.FromResult(HttpUtility.UrlEncode(input));
         }
     }
 }

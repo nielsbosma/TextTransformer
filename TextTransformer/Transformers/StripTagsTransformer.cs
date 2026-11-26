@@ -9,18 +9,15 @@ namespace TextTransformer.Transformers
 {
     public class StripTagsTransformer : ITransformer
     {
-        public string Name
-        {
-            get { return "StripTags"; }
-        }
+        public string Name => "StripTags";
 
-        public string Transform(string input)
+        public Task<string> Transform(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
-                return input;
+                return Task.FromResult(input);
             }
-            return Regex.Replace(input, @"(<[^ ])(.|\n)*?>", string.Empty);  
+            return Task.FromResult(Regex.Replace(input, @"(<[^ ])(.|\n)*?>", string.Empty));  
         }
     }
 }

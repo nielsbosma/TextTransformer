@@ -9,15 +9,12 @@ namespace TextTransformer.Transformers
 {
     public class CalculateTransformer : ITransformer
     {
-        public string Name
-        {
-            get { return "Calculate"; }
-        }
+        public string Name => "Calculate";
 
-        public string Transform(string input)
+        public Task<string> Transform(string input)
         {
             var expr = new Expression(input);
-            return expr.Evaluate().ToString();
+            return Task.FromResult(expr.Evaluate().ToString());
         }
     }
 }

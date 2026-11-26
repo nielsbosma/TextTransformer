@@ -9,18 +9,15 @@ namespace TextTransformer.Transformers
 {
     public class NormalizeWhitespaceTransformer : ITransformer
     {
-        public string Name
-        {
-            get { return "NormalizeWhitespace"; }
-        }
+        public string Name => "NormalizeWhitespace";
 
-        public string Transform(string input)
+        public Task<string> Transform(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
             {
-                return input;
+                return Task.FromResult(input);
             }
-            return (new Regex("[\\s]{1,}")).Replace(input.Trim().Replace("/n", " ").Replace("/r", " ").Replace("/t", " "), " ");
+            return Task.FromResult((new Regex("[\\s]{1,}")).Replace(input.Trim().Replace("/n", " ").Replace("/r", " ").Replace("/t", " "), " "));
         }
     }
 }

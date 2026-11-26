@@ -24,12 +24,12 @@ namespace TextTransformer.ViewModels
     
         }
 
-        public void Transform()
+        public async Task Transform()
         {
             try
             {
                 ITransformer transformer = Transformers[SelectedTransformerIndex];
-                Output = transformer.Transform(Input);
+                Output = await transformer.Transform(Input);
             }
             catch (Exception ex)
             {
@@ -51,18 +51,13 @@ namespace TextTransformer.ViewModels
 
         ////////////////////////////////////////////////////
 
-        public ICommand CopyToClipboard {
-            get
-            {
-                return new DelegateCommand(_CopyToClipboard);
-            }
-        }
+        public ICommand CopyToClipboard => new DelegateCommand(_CopyToClipboard);
 
         public TransformerCollection Transformers { get; set; }
 
         public int SelectedTransformerIndex
         {
-            get { return _selectedTransformerIndex; }
+            get => _selectedTransformerIndex;
             set
             {
                 if (_selectedTransformerIndex != value)
@@ -86,13 +81,14 @@ namespace TextTransformer.ViewModels
 
         public string Input
         {
-            get { return _input; }
+            get => _input;
             set
             {
                 if (_input != value)
                 {
                     _input = value;
                     RaisePropertyChanged("Input");
+                    //todo: there need to be throttling here
                     Transform();
                 }
             }
@@ -100,7 +96,7 @@ namespace TextTransformer.ViewModels
 
         public string Output
         {
-            get { return _output; }
+            get => _output;
             set
             {
                 if (_output != value)

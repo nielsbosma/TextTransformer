@@ -11,7 +11,7 @@ namespace TextTransformer.Transformers
 
         string Name { get; }
 
-        string Transform(string input);
+        Task<string> Transform(string input);
 
     }
 }

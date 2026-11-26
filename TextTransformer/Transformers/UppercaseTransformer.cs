@@ -8,14 +8,11 @@ namespace TextTransformer.Transformers
 {
     public class UppercaseTransformer : ITransformer
     {
-        public string Name
-        {
-            get { return "Uppercase"; }
-        }
+        public string Name => "Uppercase";
 
-        public string Transform(string input)
+        public Task<string> Transform(string input)
         {
-            return input.ToUpper();
+            return Task.FromResult(input.ToUpper());
         }
     }
 }
